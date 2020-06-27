@@ -102,9 +102,11 @@ textarea {
 html {
   font-size: 16px;
   }
+
 body {
   font-size: 1em;
-  background-color: #cacac6;
+  background-color: #cdcac5;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .wrapper {
@@ -112,6 +114,7 @@ body {
   box-sizing: border-box;
   padding: 10px 20px;
   width: 100%;
+  background-color: #cacac6;
 }
 address {
   font-style: inherit;
@@ -121,9 +124,13 @@ h1, h2, h3 {
   text-align: center;
 }
 
-#greeting h1 {
+h1 {
   width: 50%;
-  font-family: 'Fredericka the Great', cursive;
+  font-family: 'Caveat', cursive;
+  font-weight: lighter;
+  margin-top: 0;
+  padding-top: 10px;
+  font-size: 3em;
 }
 
 header {
@@ -136,7 +143,7 @@ header {
 nav {
 width: 100%;
   
-  }
+}
 ul {
   display: flex;
   flex-direction: column;
@@ -150,6 +157,11 @@ ul li, a {
   list-style: none; 
   text-decoration: none;
   font-variant: small-caps;
+  font-weight: bold;
+  color: #c29a77;
+}
+ul li a:hover {
+  text-decoration: underline;
 }
 
 footer {
@@ -158,6 +170,8 @@ footer {
 
 #about-me p {
   text-align: justify;
+  line-height: 1.5em;
+  color: #222222;
 }
 
 #education .wrapper {
@@ -179,8 +193,7 @@ footer {
 }
 
 i {
-  /*size: 2em;*/
-  color: #648373;
+  color: #c29a77;
 }
 
 /* ==========================================================================
@@ -274,10 +287,41 @@ i {
 
 @media only screen and (min-width: 768px) {
   /* Style adjustments for viewports that meet the condition */
+  body {
+    background-color: #7f919f;
+  }
+
   header {
     background: url('../img/desktop-computer.jpg') no-repeat center;
     background-size: cover;
     height: 500px;
+  }
+
+  #greeting {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h1 {
+    width: fit-content;
+    height: fit-content;
+    margin: 0;
+    padding-bottom: 75px;
+    padding-left: 75px;
+  }
+  ul li a {
+    color: #648373;
+  }
+
+  #font-awesome-icon {
+    font-size: 3em;
+  }
+
+  i {
+    color: #648373;
   }
 }
 
