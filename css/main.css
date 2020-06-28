@@ -104,7 +104,7 @@ html {
 }
 
 body {
-  font-size: 1.125em;
+  font-size: 1em;
   background-color: #cdcac5;
   font-family: 'Open Sans Condensed', sans-serif;
 }
@@ -123,6 +123,7 @@ address {
 
 h1, h2, h3 {
   text-align: center;
+  color: #648373;
 }
 
 h1 {
@@ -147,7 +148,7 @@ width: 100%;
 }
 ul {
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
   justify-content: space-around;
   align-items: center;
   width: 100%;
@@ -159,7 +160,8 @@ ul li, a {
   text-decoration: none;
   font-variant: small-caps;
   font-weight: bold;
-  color: #c29a77;
+  color: #648373;
+  font-size: 1.125em;
 }
 
 ul li a:hover {
@@ -169,6 +171,7 @@ ul li a:hover {
 /*About Me section*/
 #about-me p {
   text-align: justify;
+  font-size: 1.125em;
   line-height: 1.5em;
   color: #222222;
 }
@@ -176,13 +179,21 @@ ul li a:hover {
 /*Education section*/
 #education .wrapper {
   justify-content: space-around;
-  flex-flow: column wrap;
+  flex-flow: row wrap;
+}
+#education p {
+  text-align: center;
+  font-size: 1.125em;
 }
 
 /*Projects section*/
 #projects .wrapper {
   display: flex;
   flex-flow: column wrap;
+}
+
+#projects p {
+  font-size: 1.125em;
 }
 
 .portfolio {
@@ -204,18 +215,28 @@ footer {
   width: 100%;
 }
 
+#contact p {
+  font-size: 1.125em;
+}
+
 #contact .wrapper {
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-around;
 }
 
+.social-media {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
 #contact h3 {
   width: 100%;
 }
 
 i {
-  color: #c29a77;
+  color: #648373;
 }
 
 /* ==========================================================================
@@ -310,7 +331,10 @@ i {
 @media only screen and (min-width: 768px) {
   /* Style adjustments for viewports that meet the condition */
   body {
-    background-color: #7f919f;
+    background-color: #cfceca;
+  }
+  .wrapper {
+    background-color: #cfceca;
   }
 
   header {
@@ -336,6 +360,10 @@ i {
   }
 
   /*Navigation*/
+  #navigation ul {
+  flex-flow: row wrap;
+  }
+
   ul li a {
     color: #648373;
   }
@@ -343,6 +371,15 @@ i {
   /*About Me section*/
   #font-awesome-icon {
     font-size: 3em;
+  }
+  #about-me {
+    display: flex;
+  }
+  #about-me p {
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
   }
 
   i {
@@ -357,9 +394,26 @@ i {
   }
 
   .portfolio {
-    width: 30%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .portfolio img {
+    width: 150px;
+    height: 150px;
+    box-sizing: border-box;
+    padding: 10px;
   }
   /*Contact Section*/
+  #contact .wrapper {
+    flex-flow: column wrap;
+    align-items: center;
+  }
+  .social-media {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+  }
 }
 
 @media only screen and (min-width: 1180px) {
